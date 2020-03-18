@@ -11,6 +11,6 @@
 
     </head>
     <body>
-    <h1>{{$post}}</h1>
+    <h1>{{$post->body}}</h1>
     </body>
 </html>
