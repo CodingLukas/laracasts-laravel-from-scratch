@@ -30,5 +30,12 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/welcome', function () {
+    return view('video15.welcome');
+});
+
+Route::get('/about', function () {
+    return view('video15.about');
+});
 
 
