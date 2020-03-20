@@ -26,6 +26,9 @@ Route::get('test', function () {
 
 Route::get('/posts/{post}', 'PostsController@show');
 
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 
 
