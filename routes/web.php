@@ -35,7 +35,9 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/about', function () {
-    return view('video15.about');
+    return view('video15.about', [
+        'articles' => App\Article::take(3)->latest()->get()
+    ]);
 });
 
 
