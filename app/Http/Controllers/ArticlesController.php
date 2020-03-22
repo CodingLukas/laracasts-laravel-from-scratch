@@ -7,6 +7,12 @@ use App\Article;
 
 class ArticlesController extends Controller
 {
+    public function index()
+    {
+        $articles = Article::latest()->get();
+        return view('article.index', ['articles' => $articles]);
+    }
+
     public function show($id)
     {
         $article = Article::find($id);
