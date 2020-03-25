@@ -44,3 +44,4 @@ Route::get('/articles/{article}', 'ArticlesController@show');
 Route::get('/articles/', 'ArticlesController@index');
 
 
+

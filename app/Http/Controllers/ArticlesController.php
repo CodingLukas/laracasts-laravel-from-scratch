@@ -18,4 +18,28 @@ class ArticlesController extends Controller
         $article = Article::find($id);
         return view('article.show', ['article' => $article]);
     }
+
+    public function create()
+    {
+
+    }
+
+    public function store()
+    {
+
+    }
+
+    public function edit()
+    {
+
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function destroy(){
+
+    }
 }
