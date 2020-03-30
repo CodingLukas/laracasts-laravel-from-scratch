@@ -43,5 +43,13 @@ Route::get('/about', function () {
 Route::get('/articles/{article}', 'ArticlesController@show');
 Route::get('/articles/', 'ArticlesController@index');
 
+// GET /videos
+// GET /videos/create
+// POST /videos
+// GET /videos/2
+// Get /videos/2/edit
+// PUT /videos/2
+// DELETE /videos/2
 
+// POST /videos/subcriptions => VideoSubcriptionController@store
 
