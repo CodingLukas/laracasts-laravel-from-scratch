@@ -8,8 +8,13 @@ class Article extends Model
 {
 
     protected $fillable = ['title', 'excerpt', 'body'];
+    protected $guarded = [];
+
+    public function path(){
+        return route('articles.show', $this);
+    }
 //    public function getRouteKeyName()
 //    {
-//        return 'slug'; // Article::where('slug',$article->first())
+//        return 'slug'; // Article::where('slug',$articles->first())
 //    }
 }
