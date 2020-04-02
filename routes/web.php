@@ -56,3 +56,9 @@ Route::put('/articles/{articles}', 'ArticlesController@update');
 
 // POST /videos/subcriptions => VideoSubcriptionController@store
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')
+    ->name('home')
+    ->middleware('auth');
