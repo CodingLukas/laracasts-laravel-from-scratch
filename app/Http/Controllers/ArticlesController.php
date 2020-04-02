@@ -4,18 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Tag;
 
 class ArticlesController extends Controller
 {
     public function index()
     {
-        $articles = Article::latest()->get();
+        if (request('tag')) {
+            $articles = Tag::where('name', request('tag'))->firstOrFail()->articles;
+        } else {
+            $articles = Article::latest()->get();
+        }
         return view('articles.index', ['articles' => $articles]);
     }
 
     public function show(Article $article)
     {
-        return view('articles.show', ['articles' => $article]);
+        return view('articles.show', ['article' => $article]);
     }
 
 

@@ -8,7 +8,7 @@ class Article extends Model
 {
 
     protected $fillable = ['title', 'excerpt', 'body'];
-    protected $guarded = [];
+//    protected $guarded = [];
 
     public function path()
     {
