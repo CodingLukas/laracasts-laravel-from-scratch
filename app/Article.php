@@ -17,4 +17,8 @@ class Article extends Model
 //    {
 //        return 'slug'; // Article::where('slug',$articles->first())
 //    }
+
+        public function user(){
+
+        }
 }
