@@ -12,10 +12,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function (){
 
-Route::get('/', function () {
-    return view('welcome');
+   $container = new \App\Container();
+
+   $container->bind('example', function(){
+       return new \App\Example();
+    });
+
+   $example = $container->resolve('example');
+
+   //ddd($example);
+
 });
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('test', function () {
     $name = request('name');
