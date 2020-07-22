@@ -48,9 +48,9 @@ Route::get('test', function () {
 
 Route::get('/posts/{post}', 'PostsController@show');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+//Route::get('/contact', function () {
+//    return view('contact');
+//});
 
 Route::get('/welcome', function () {
     return view('video15.welcome');
@@ -85,4 +85,5 @@ Route::get('/home', 'HomeController@index')
     ->name('home')
     ->middleware('auth');
 
-
+Route::get('/contact', 'ContactController@show');
+Route::post('/contact', 'ContactController@store');
