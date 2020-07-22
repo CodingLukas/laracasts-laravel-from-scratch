@@ -12,7 +12,6 @@
                             {{ session('message') }}
                         </div>
                     @endif
-
                     <div class="card-body">
 
                         <form
