@@ -87,3 +87,6 @@ Route::get('/home', 'HomeController@index')
 
 Route::get('/contact', 'ContactController@show');
 Route::post('/contact', 'ContactController@store');
+
+Route::get('payments/create', 'PaymentsController@create')->middleware('auth');
+Route::post('payments', 'PaymentsController@store')->middleware('auth');
