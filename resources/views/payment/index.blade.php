@@ -6,7 +6,7 @@
             <div id="content">
                 <form class="modal-content animate" action="{{ url('/payments')  }}" method="post">
                     @csrf
-                    <button type="submit" value="Press it"></button>
+                    <input class="btn btn-success" value="Create" name="submitbutton" type="submit"></input>
                 </form>
             </div>
         </div>

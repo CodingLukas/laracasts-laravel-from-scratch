@@ -47,6 +47,11 @@ class User extends Authenticatable
         return $this->hasMany(Project::class); // select * from projects where user_id = 1
     }
 
+    public function routeNotificationForNexmo($notification)
+    {
+        return '+37063617990';
+    }
+
     // $ user = User::find(1); // select * from user where id = 1;
     // $user->projects; // select * from projects where user_id = 1
     // $user->projects->first|groupBy|...
