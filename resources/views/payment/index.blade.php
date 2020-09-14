@@ -4,7 +4,10 @@
     <div id="wrapper">
         <div id="page" class="container">
             <div id="content">
-                <a class="btn btn-primary" href="/payments" role="button">Make Payment</a>
+                <form class="modal-content animate" action="{{ url('/payments')  }}" method="post">
+                    @csrf
+                    <button type="submit" value="Press it"></button>
+                </form>
             </div>
         </div>
     </div>
