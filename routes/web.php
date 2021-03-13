@@ -91,3 +91,13 @@ Route::post('/contact', 'ContactController@store');
 Route::get('payments/create', 'PaymentsController@create')->middleware('auth');
 Route::post('payments', 'PaymentsController@store')->middleware('auth');
 Route::get('notifications', 'UserNotificationsController@show')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// video 50
+Route::get('conversations', 'ConversationsController@index');
+Route::get('conversations/{conversation}', 'ConversationsController@show');
+
+Route::post('best-replies/{reply}', 'ConversationBestReplyController@store');

@@ -55,4 +55,12 @@ class User extends Authenticatable
     // $ user = User::find(1); // select * from user where id = 1;
     // $user->projects; // select * from projects where user_id = 1
     // $user->projects->first|groupBy|...
+
+    public function conversations() {
+        return $this->hasMany(Conversation::class);
+    }
+
+    public function replies() {
+        return $this->hasMany(Reply::class);
+    }
 }
