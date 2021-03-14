@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -101,3 +102,13 @@ Route::get('conversations', 'ConversationsController@index');
 Route::get('conversations/{conversation}', 'ConversationsController@show')->middleware('can:view,conversation');
 
 Route::post('best-replies/{reply}', 'ConversationBestReplyController@store');
+
+//auth()->loginUsingId(16);
+
+Route::get('/welcome54', function () {
+    return view('video54.welcome');
+});
+
+Route::get('/reports', function () {
+    return 'the secret people';
+})->middleware('can:view_reports');

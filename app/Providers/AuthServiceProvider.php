@@ -26,6 +26,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        Gate::before(function($user, $ability){
+            if ($user->abilities()->contains($ability)) {
+                return true;
+            }
+        });
         //
         // Give all permissions to user with 16 id
 //        Gate::before(function(User $user){
